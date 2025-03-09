@@ -79,7 +79,7 @@ form input::placeholder {
     font-weight: 600;
 }
 
-.trial-btn {
+#trial-btn {
     background-color: var(--green);
     color: #fff;
     font-size: 15px;
@@ -137,6 +137,4 @@ form input::placeholder {
         font-size: 50px;
         margin-bottom: 45px;
     }
-
-
 }
