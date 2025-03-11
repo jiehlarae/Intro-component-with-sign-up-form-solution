@@ -111,6 +111,11 @@ form input::placeholder {
     font-weight: bold;
 }
 
+/* 
+input {
+    background: url(images/icon-error.svg) no-repeat center right 20px;
+} */
+
 @media only screen and (min-width: 768px) {
     body {
         width: 100%;
