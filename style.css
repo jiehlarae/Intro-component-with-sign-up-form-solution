@@ -68,9 +68,12 @@ section:first-of-type p {
 form input {
     width: 100%;
     padding: 15px;
-    margin-bottom: 16px;
     border: 1px solid var(--grayish-blue);
     border-radius: 5px;
+}
+
+form div {
+    margin-bottom: 16px;
 }
 
 form input::placeholder {
@@ -79,7 +82,7 @@ form input::placeholder {
     font-weight: 600;
 }
 
-.trial-btn {
+#trial-btn {
     background-color: var(--green);
     color: #fff;
     font-size: 15px;
@@ -111,6 +114,17 @@ form input::placeholder {
     font-weight: bold;
 }
 
+.error {
+    color: var(--red);
+    font-size: 11px;
+    margin-top: 6px;
+    text-align: right;
+}
+
+input:invalid {
+    border: 1px solid var(--red);
+}
+
 @media only screen and (min-width: 768px) {
     body {
         width: 100%;
@@ -131,6 +145,7 @@ form input::placeholder {
 
     section:first-of-type {
         text-align: left;
+        flex: 1;
     }
 
     section:first-of-type h1 {
