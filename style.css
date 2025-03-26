@@ -125,6 +125,21 @@ input:invalid {
     border: 1px solid var(--red);
 }
 
+input:focus {
+    border: 1px solid var(--blue);
+    outline: none;
+}
+
+.errorState {
+    background: url(../images/icon-error.svg) no-repeat right 20px center;
+    border: 1px solid var(--red);
+}
+
+.successState {
+    background: none;
+    border: 1px solid var(--dark-blue);
+}
+
 @media only screen and (min-width: 768px) {
     body {
         width: 100%;

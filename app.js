@@ -16,8 +16,8 @@ function setError(element, message) {
     const errorMessage = inputForm.querySelector('.error');
 
     errorMessage.innerText = message;
-    element.style.border = '1px solid var(--red)';
-    element.style.background = 'url(../images/icon-error.svg) no-repeat right 20px center';
+    element.classList.add('errorState');
+    element.classList.remove('successState');
 }
 
 function setSuccess(element) {
@@ -26,8 +26,8 @@ function setSuccess(element) {
     const inputs = inputForm.querySelector('input');
 
     errorMessage.innerText = '';
-    element.style.border = '1px solid var(--dark-blue)';
-    element.style.background = 'none';
+    element.classList.add('successState');
+    element.classList.remove('errorState');
 }
 
 function validEmail(email) {
@@ -53,14 +53,13 @@ function validateInputs() {
         setSuccess(lastName);
     }
 
-    // Need to fix this
-    // if (emailValue === '') {
-    //     setError(email, 'Email cannot be empty')
-    // } else if (!validEmail(emailValue)) {
-    //     setError(email, 'Looks like this is not an email')
-    // } else {
-    //     setSuccess(email);
-    // }
+    if (emailValue === '') {
+        setError(email, 'Email cannot be empty');
+    } else if (!validEmail(emailValue)) {
+        setError(email, 'Looks like this is not an email');
+    } else {
+        setSuccess(email);
+    }
 
     if (passwordValue === '') {
         setError(password, 'Password cannot be empty')
